@@ -1,11 +1,13 @@
+Solution For The Problem in Java
+
 class Solution {
-  public int[] twoSum(int[] nums, int target) {
+  public int[] twoSum(int[] num, int targetNum) {
     Map<Integer, Integer> numToIndex = new HashMap<>();
 
-    for (int i = 0; i < nums.length; ++i) {
-      if (numToIndex.containsKey(target - nums[i]))
-        return new int[] {numToIndex.get(target - nums[i]), i};
-      numToIndex.put(nums[i], i);
+    for (int i = 0; i < num.length; ++i) {
+      if (numToIndex.containsKey(targetNum - num[i]))
+        return new int[] {numToIndex.get(targetNum - num[i]), i};
+      numToIndex.put(num[i], i);
     }
 
     throw new IllegalArgumentException();
